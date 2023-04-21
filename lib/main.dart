@@ -1,3 +1,4 @@
+import 'package:asdapp/pages/homepage.dart';
 import 'package:asdapp/widgets/ui/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-      
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -35,50 +35,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-   
+    final widthSize = MediaQuery.of(context).size.width;
+    final heightSize = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
-      
         title: Text(widget.title),
       ),
       drawer: MyDrawer(),
-      body: Container(
-          child: Row(
-        children: [
-          // partie dasboard
-          Container(
-            height: size.height,
-            width: size.width / 4,
-            color: Colors.red,
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [
-                ListTile(
-                  title: Text('Item 1'),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                  },
-                ),
-                ListTile(
-                  title: Text('Item 2'),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                  },
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: size.height,
-            width: size.width / 2,
-            color: Colors.black,
-            child: Text('parti2'),
-          ),
-        ],
-      )),
+      body: HomePage()
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
