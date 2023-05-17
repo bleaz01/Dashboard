@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
   final IconData icon;
-  const MyCard({
-    Key? key,
+  final String title;
+
+  MyCard({
+    required this.title,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +22,21 @@ class MyCard extends StatelessWidget {
     );
 
     return Container(
-      width: 120,
-      height: 90,
+      height: 80,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Heart Shaker'),
-              
+            ListTile(
+              leading: Icon(icon),
+              title: Text(title),
+
             ),
-            
+
           ],
         ),
       ),

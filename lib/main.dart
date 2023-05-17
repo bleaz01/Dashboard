@@ -39,12 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final heightSize = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      drawer: MyDrawer(),
-      body: HomePage()
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        appBar: AppBar(
+          title: Text("DashBoard ASD"),
+        ),
+        drawer: MyDrawer(),
+        body: HomePage()
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }

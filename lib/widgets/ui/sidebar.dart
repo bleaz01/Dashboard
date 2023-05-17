@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'card.dart';
+
 class MySidebar extends StatefulWidget {
   const MySidebar({super.key});
 
@@ -17,8 +19,16 @@ class _MySidebarState extends State<MySidebar> {
       height: appHeight,
       width: appWidth * 0.2,
       color: Colors.blue,
-      child: Column(children: [
-        Text("sidebar")
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+        Text("sidebar"),
+        MyCard(title:"Liste du personnelle",icon: Icons.person,),
+        MyCard(title:"En cours",icon: Icons.access_alarm_rounded,),
+
+
+
       ]),
     );
   }

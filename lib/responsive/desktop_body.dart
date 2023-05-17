@@ -12,7 +12,7 @@ class Desktopbody extends StatelessWidget {
     return Container(
         width: appWidth,
         height: appHeight,
-        color: Colors.amber,
+       
         padding: EdgeInsets.all(10),
         child: Row(
           children: [
@@ -33,6 +33,7 @@ class Desktopbody extends StatelessWidget {
                 height: appHeight,
                 width: appWidth,
                 color: Colors.red,
+                child: ,
               ),
             ),
           ],

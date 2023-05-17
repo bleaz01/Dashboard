@@ -24,8 +24,8 @@ class MyDrawer extends StatelessWidget {
               ),
           ),
         
-     MyCard(icon: Icons.home,),
-     MyCard(icon: Icons.person,)
+     MyCard(title:"Reservation Salle",icon: Icons.meeting_room,),
+     MyCard(title:"On Boarding",icon: Icons.person,)
         ],
       ),
     );
