@@ -24,6 +24,7 @@ class MyCard extends StatelessWidget {
     return Container(
       height: 80,
       child: Card(
+
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
@@ -39,6 +40,7 @@ class MyCard extends StatelessWidget {
 
           ],
         ),
+        
       ),
     );
   }

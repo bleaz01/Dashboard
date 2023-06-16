@@ -1,3 +1,4 @@
+import 'package:asdapp/pages/gestionPersonel.dart';
 import 'package:asdapp/widgets/ui/sidebar.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,6 @@ class Desktopbody extends StatelessWidget {
     return Container(
         width: appWidth,
         height: appHeight,
-       
         padding: EdgeInsets.all(10),
         child: Row(
           children: [
@@ -32,8 +32,8 @@ class Desktopbody extends StatelessWidget {
               child: Container(
                 height: appHeight,
                 width: appWidth,
-                color: Colors.red,
-                child: ,
+                color: Color.fromARGB(255, 181, 185, 187),
+                child: PeopleManage(),
               ),
             ),
           ],
